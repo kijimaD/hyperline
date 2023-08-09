@@ -1,3 +1,3 @@
 FROM rust:latest
 
-RUN cargo install mdbook
+RUN cargo install mdbook book-summary

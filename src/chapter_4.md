@@ -29,18 +29,18 @@
 Station{
     id: "tokyo",
     name: "東京駅",
-    l: 10,
-    w: 20,
+    length: 10,
+    width: 20,
+    locate: Point{x: 1, y: 2},
 }
 ```
 
-線路。点の集合体。カーブや勾配には制限がある。
+線路。線(点の集合体)。カーブや勾配には制限がある。
 
 ```
 Rail{
-    line: [Point{x: 1, y: 2, h: 6}, Point{x: 3, y: 4, h: 6}"],
-    multi: true,
-    elec: true,
+    line: Line{ points: [Point{x: 1, y: 2, h: 6}, Point{x: 3, y: 4, h: 6}"]},
+    track: 2, // 複線
 }
 ```
 
@@ -62,3 +62,7 @@ create route(chuo, "tokyo:12,11", "kanda:1", "ochanomizu:4", "kanda:2")
 ## 建築物のルール
 
 - 建築物は住所として1つの点を持つ。同時に、縦横高さを持つ。同じ空間に重ねることはできない
+
+## 制限
+
+空間的な制限をどう定義するか。
