@@ -2,4 +2,4 @@
 authors = []
 language = "ja"
 multilingual = false
-src = "src"
+src = "designdoc"

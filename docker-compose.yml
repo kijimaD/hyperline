@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  designdoc:
+    build:
+      context: .
+      target: designdoc
+    volumes:
+      - .:/work
+    ports:
+      - 3003:3000
+    command: mdbook serve -p 3000 -n 0.0.0.0
